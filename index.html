@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Princess Day</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<!-- Burnt Letter Input Screen -->
+<div id="letter-screen">
+    <div id="letter">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="princessName" placeholder="Your name...">
+        <button onclick="startStory()">Begin</button>
+        <div class="zigzag">✧ ✦ ✧ ✦ ✧</div>
+    </div>
+</div>
+
+<!-- Storybook Transition -->
+<div id="book-screen">
+    <div id="book">
+        <h1>GRACE</h1>
+    </div>
+</div>
+
+<!-- Moonlight / Mirror Screen -->
+<div id="mirror-screen">
+    <div id="moon"></div>
+    <div id="mirror">
+        <p id="mirror-text"></p>
+    </div>
+</div>
+
+<!-- Music -->
+<audio id="music-falak" src="goldenbrown.mp3"></audio>
+<audio id="music-other" src="lovestory.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
