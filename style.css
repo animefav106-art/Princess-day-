@@ -1,1 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    font-family: "Georgia", serif;
+    overflow: hidden;
+}
 
+/* ───────── Burnt Letter Screen ───────── */
+
+#letter-screen {
+    width: 100vw;
+    height: 100vh;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#letter {
+    background: url('https://i.imgur.com/2xK2U3F.png');
+    background-size: cover;
+    width: 80%;
+    max-width: 400px;
+    height: 60%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    animation: fadeIn 2s ease;
+}
+
+#letter h2 {
+    font-size: 26px;
+    color: #4e2e0f;
+}
+
+#letter input {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #4e2e0f;
+    background: transparent;
+    color: #4e2e0f;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#letter button {
+    margin-top: 20px;
+    background: #4e2e0f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.zigzag {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #4e2e0f;
+}
+
+/* ───────── Storybook Screen ───────── */
+
+#book-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #2c1e13;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s;
+}
+
+#book {
+    width: 80%;
+    height: 70%;
+    background: url('https://i.imgur.com/pg0D4W2.png');
+    background-size: cover;
+    text-align: center;
+    padding-top: 40px;
+    animation: openBook 4s forwards;
+}
+
+#book h1 {
+    font-size: 40px;
+    color: white;
+}
+
+/* ───────── Mirror Screen ───────── */
+
+#mirror-screen {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    animation: fadeIn 3s ease;
+}
+
+#moon {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.9), transparent);
+    opacity: 0;
+    animation: moonlight 6s forwards;
+}
+
+#mirror {
+    position: absolute;
+    bottom: 10%;
+    width: 90%;
+    left: 5%;
+    height: 60%;
+    background: url('https://i.imgur.com/ophkQpL.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: showMirror 8s forwards;
+}
+
+#mirror-text {
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 20%;
+}
+
+/* ───────── Animations ───────── */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes openBook {
+    from { transform: scale(0.1) rotateY(90deg); opacity: 0; }
+    to { transform: scale(1) rotateY(0deg); opacity: 1; }
+}
+
+@keyframes moonlight {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes showMirror {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
